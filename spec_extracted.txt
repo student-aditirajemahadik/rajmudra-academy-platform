@@ -1,0 +1,147 @@
+RAJMUDRA ACADEMY
+Academy Management PlatformComplete Project Specification & Technical Blueprint
+Project Type: Production-ready Academy Website + Management Portal
+Document Version: 1.0
+Prepared for: Rajmudra Academy
+1. Project Vision
+Rajmudra Academy will be developed as a modern, responsive, secure and scalable Academy Management Platform. It will combine a public-facing academy website with online admission, student management, teacher management, administration, attendance, fees, payments, study material, tests, examinations, results, notifications and reporting.
+The platform should be designed as a reusable foundation so that the same core architecture can later be customized for other academies without rebuilding the complete system from scratch.
+2. Primary Objectives
+• Build a professional public website for Rajmudra Academy.• Provide a complete online admission workflow.• Provide separate Student, Teacher and Admin portals.• Implement secure Role-Based Access Control (RBAC).• Manage courses, batches, students, teachers and enrollments.• Track attendance, fees, payments and receipts.• Provide study material and online tests.• Track examination results and student performance.• Provide notices and notifications.• Provide reports, dashboards and analytics.• Keep academy-specific branding and content configurable.• Make the platform responsive across mobile, tablet and desktop.
+3. User Roles
+1. Academy Admin — complete management access.2. Teacher — assigned batches, students, attendance, study material, tests and marks.3. Student — profile, application, course, batch, attendance, fees, study material, tests and results.4. Public Visitor — public website, course information, enquiry and admission entry points.5. Optional future Super Admin — useful if the platform becomes a multi-academy SaaS product.
+4. Public Website
+Recommended pages:• Home• About Academy• Courses• Course Details• Batches• Faculty• Results / Achievements• Gallery• Notices / Announcements• FAQ• Contact• Apply Now• Student Login
+The public website should be SEO-friendly, responsive, fast-loading and conversion-focused.
+5. Home Page
+Recommended sections:• Header and navigation• Hero section with academy value proposition• Apply Now and Explore Courses CTAs• Academy statistics• Why Choose Us• Featured Courses• Upcoming Batches• Results / Achievements• Faculty preview• Testimonials• Latest Notices• Contact / enquiry CTA• Footer
+Academy statistics, featured courses, notices and testimonials should preferably be configurable from the Admin Panel instead of hardcoded.
+6. Online Admission Workflow
+Recommended workflow:Apply Now → Account Registration → Student Profile → Application Form → Document Upload → Save Draft → Submit Application → Admin Review → Approved / Rejected → Enrollment.
+Application states:DRAFT → SUBMITTED → UNDER_REVIEW → APPROVED / REJECTED → ENROLLED.
+Students should be able to save an incomplete application and continue later. Critical fields should become locked after submission unless the Admin reopens the application.
+7. Student Registration & Profile
+Registration fields:• Full Name• Mobile Number• Email• Password• Confirm Password
+Profile sections:• Personal information• Date of birth• Gender• Contact information• Address• Educational information• Profile photo• Parent / guardian information
+The backend must validate uniqueness, password strength, input format and authorization.
+8. Student Portal
+Suggested routes:• /student/login• /student/dashboard• /student/profile• /student/application• /student/course• /student/batch• /student/attendance• /student/fees• /student/material• /student/tests• /student/results• /student/documents• /student/notices• /student/notifications• /student/settings
+Dashboard cards should include Application Status, Current Course, Current Batch, Attendance, Pending Fees, Upcoming Test and Latest Notice.
+9. Teacher Portal
+Suggested routes:• /teacher/login• /teacher/dashboard• /teacher/batches• /teacher/students• /teacher/attendance• /teacher/material• /teacher/tests• /teacher/marks• /teacher/notices• /teacher/profile• /teacher/settings
+Teachers must only see batches and students assigned to them unless the Admin explicitly grants broader permission.
+10. Admin Portal
+Admin modules:• Dashboard• Applications• Students• Teachers• Courses• Batches• Enrollments• Attendance• Fees• Payments• Study Material• Tests & Exams• Results• Notices• Notifications• Gallery• Testimonials• Enquiries• Reports• Settings• Audit Logs
+11. Course Management
+Admin should be able to create and manage courses without code changes.
+Course fields:• Course Name• Slug• Short Description• Full Description• Duration• Fees• Category• Eligibility• Syllabus• Thumbnail• Featured status• Active / inactive status
+Example course categories can include competitive exam preparation, academic coaching or other academy-specific programs.
+12. Batch Management
+Batch fields:• Batch Name• Course• Assigned Teacher• Start Date• End Date• Start Time• End Time• Days• Capacity• Room / Location• Status
+Admin should be able to create batches, assign teachers and enroll students.
+13. Enrollment
+Approved applications should be converted into enrollments.
+Workflow:Application Approved → Select Course → Select Batch → Enroll Student → Student becomes ENROLLED.
+Enrollment records should preserve the relationship between student, course, batch, admission/application and enrollment date.
+14. Attendance
+Attendance statuses:• PRESENT• ABSENT• LATE• EXCUSED
+Teacher/Admin workflow:Select Batch → Select Date → Mark Attendance → Save.
+Student dashboard should show daily, monthly and overall attendance percentages. Admin should be able to generate attendance reports.
+15. Fees & Payments
+Fee management should track:• Total Fees• Discount• Final Amount• Paid Amount• Pending Amount• Due Date• Payment Status• Payment History
+If online payment is required, Razorpay can be integrated.
+Important: payment success must be verified on the backend. The system should not trust a frontend-only payment status.
+16. Study Material
+Teachers/Admin can upload or publish:• PDF notes• Documents• Video links• Test papers• Assignments• Other learning resources
+Material should be linked to course, batch and subject where applicable. Students should only access material for which they are authorized.
+17. Tests & Online Examination
+Test configuration:• Test Name• Course• Batch• Subject• Duration• Total Marks• Passing Marks• Start Date• End Date
+Question fields:• Question• Option A• Option B• Option C• Option D• Correct Answer• Marks• Negative Marks
+Online test workflow:Start Test → Timer → Questions → Submit → Server Validation → Evaluation → Result.
+Important controls include server-side timing, attempt tracking, auto-submit on timeout and duplicate submission prevention.
+18. Results & Performance
+Student results should include:• Test name• Marks• Percentage• Rank where applicable• Pass / fail status• Subject-wise performance
+Analytics can include average score, highest score, lowest score, subject performance and progress over time.
+19. Notices & Notifications
+Admin can publish notices with:• Title• Description• Category• Publish Date• Expiry Date• Target Audience• Attachment• Status
+Target audiences may include ALL, STUDENTS, TEACHERS or SPECIFIC_BATCH.
+Future notification channels can include in-app notifications, email, SMS and WhatsApp integrations.
+20. Document Management
+Students may upload:• Photograph• Identity proof• Educational certificates• Other required documents
+Admin can:• View• Verify• Reject• Request re-upload
+Document states:PENDING → VERIFIED / REJECTED.
+21. Enquiry / Lead Management
+Public visitors can submit:• Name• Mobile• Email• Course• Message
+Admin lead statuses:• NEW• CONTACTED• INTERESTED• CONVERTED• NOT_INTERESTED
+This allows the website to function as a basic admission lead management system.
+22. Gallery & Testimonials
+Gallery management should support images grouped by events, seminars, classrooms, achievements and other categories.
+Testimonials should support:• Student name• Course• Review• Rating• Photo• Publication status
+Admin controls which testimonials are visible publicly.
+23. Dashboard & Analytics
+Admin dashboard KPIs:• Total Students• Active Students• New Applications• Pending Applications• Total Teachers• Active Courses• Active Batches• Total Revenue• Pending Fees
+Recommended charts:• Monthly admissions• Revenue trends• Student growth• Attendance• Course popularity• Test performance
+Chart.js can be used for dashboard visualizations.
+24. Reports
+Recommended reports:• Admission Report• Student Report• Course Report• Batch Report• Attendance Report• Fee Collection Report• Pending Fees Report• Payment Report• Test / Result Report• Student Performance Report
+Reports can support search, filters, date ranges and CSV/Excel/PDF export depending on implementation.
+25. SEO & Public Web Performance
+Implement:• Page metadata• Open Graph metadata• Canonical URLs• Sitemap• robots.txt• Structured data where appropriate• SEO-friendly slugs• Optimized images• Lazy loading• Server-side rendering / static generation where appropriate• Fast page loads
+Example: /courses/police-bhartiinstead of: /course?id=123
+26. Security Requirements
+Security requirements:• Secure password hashing• Secure session/token handling• Role-Based Access Control• Server-side authorization• Input validation• Rate limiting• CORS configuration• Secure cookies where applicable• CSRF protection where applicable• XSS protection• ORM-based database access• File type and size validation• Secure file storage• Environment variables for secrets• Payment verification• Audit logs
+Students must never be able to access Admin or Teacher resources through direct URL/API requests.
+27. Database Entities
+Recommended Prisma/PostgreSQL entities:• User• StudentProfile• TeacherProfile• AdminProfile• Course• Batch• Enrollment• Application• ApplicationDocument• Attendance• AttendanceRecord• Fee• Payment• Receipt• StudyMaterial• Test• Question• TestAttempt• TestAnswer• Result• Notice• Notification• Gallery• Testimonial• Enquiry• AuditLog• SystemSetting
+28. Database Relationship Principles
+Core relationships:User → StudentProfile / TeacherProfile / AdminProfileStudentProfile → Applications / Enrollments / Attendance / Payments / Tests / DocumentsCourse → Batches / Study MaterialsBatch → Students / Teacher / Attendance / TestsTest → Questions / Attempts / Results
+Use foreign keys, unique constraints, indexes and appropriate cascading rules. Avoid duplicated data where a normalized relation can be used.
+29. Recommended Tech Stack
+Frontend:• Next.js• React• TypeScript• Tailwind CSS
+Backend:• Node.js• Express or Next.js API layer
+Database:• PostgreSQL• Prisma ORM
+Charts:• Chart.js
+Payments:• Razorpay
+Deployment:• Vercel or suitable frontend hosting• VPS / managed backend hosting where required• Managed PostgreSQL
+Storage:• Production object storage for uploaded documents and media.
+30. Suggested Project Structure
+academy-platform/├── app/│   ├── (public)/│   ├── student/│   ├── teacher/│   ├── admin/│   ├── auth/│   └── api/├── components/│   ├── ui/│   ├── public/│   ├── student/│   ├── teacher/│   └── admin/├── lib/│   ├── auth/│   ├── db/│   ├── validation/│   ├── payments/│   └── notifications/├── prisma/│   ├── schema.prisma│   └── migrations/├── services/├── types/├── utils/└── public/
+31. Development Phases
+Phase 1 — Foundation: project setup, database, Prisma, authentication, RBAC and UI system.
+Phase 2 — Public Website: home, about, courses, faculty, results, gallery, contact, notices and SEO.
+Phase 3 — Admission: registration, profile, application, documents, application status and admin review.
+Phase 4 — Academic Management: courses, batches, enrollment, teachers, students and attendance.
+Phase 5 — Finance: fees, payments, Razorpay, receipts and reports.
+Phase 6 — Learning: study material, tests, examinations, results and performance analytics.
+Phase 7 — Advanced Admin: notifications, reports, audit logs, analytics and settings.
+Phase 8 — Production: security testing, performance testing, responsive testing, backups, deployment, domain, SSL and final QA.
+32. Testing Strategy
+Functional testing:Registration, login, logout, admission, application, approval, enrollment, attendance, fees, payments, tests and results.
+Role testing:Student cannot access Admin.Student cannot access Teacher.Teacher cannot access Admin.Teacher cannot modify unauthorized students.
+Responsive testing:Mobile, tablet, laptop and desktop.
+Security testing:Unauthorized URLs, invalid/expired tokens, permission bypass, invalid uploads, API abuse and authentication edge cases.
+Payment testing:Successful, failed, cancelled, duplicate and delayed payment scenarios.
+33. Deployment Architecture
+Recommended production flow:
+Domain  ↓Public Website / Portals  ↓Backend / API  ├── PostgreSQL  ├── Object Storage  └── Payment Gateway
+Production requirements:• HTTPS / SSL• Environment variables• Database backups• Error logging• Monitoring• Secure secrets• Migration strategy• Recovery plan
+34. Reusable Multi-Academy Strategy
+The Rajmudra Academy project should be structured as a reusable core system.
+Reusable modules:AuthenticationRBACUsersStudentsTeachersCoursesBatchesApplicationsAttendanceFeesPaymentsStudy MaterialTestsResultsNoticesAdmin DashboardSettings
+Academy-specific configuration:• Academy Name• Logo• Favicon• Brand identity• Contact information• Address• Courses• Faculty• Admission fields• Fees• Content• Domain
+For separate client deployments, separate production databases and environments are recommended for strong data isolation. A future SaaS version can use an academyId/tenant architecture.
+35. Branding & Configuration
+Avoid hardcoding academy-specific values throughout the application.
+Admin-configurable settings should include:• Academy name• Logo• Favicon• Phone• Email• Address• Social links• Working hours• Admission settings• Payment settings• Notification settings• SEO settings
+This makes the platform significantly easier to reuse for future academy clients.
+36. Production Acceptance Criteria
+The project should be considered ready for client handover only when:• All required public pages are complete.• Student, Teacher and Admin authentication works.• RBAC has been tested.• Admission workflow works end-to-end.• Application approval and enrollment work.• Courses and batches work.• Attendance works.• Fees and payment verification work if enabled.• Study material works.• Tests and results work if included in scope.• Responsive testing passes.• Security checks pass.• Database backup strategy is configured.• Production domain and SSL are configured.• No critical console/server errors remain.• Client content has been reviewed.• Final UAT has been completed.
+37. Recommended Product Positioning
+Do not position the solution only as a website.
+Recommended product name:Rajmudra Academy Management Platform
+Value proposition:Public Academy Website + Online Admission + Student Portal + Teacher Portal + Admin Management + Academic Operations.
+This positioning increases perceived business value and makes the solution reusable as a product for future academy clients.
+38. Final Recommended Architecture
+                 RAJMUDRA ACADEMY PLATFORM                           │        ┌──────────────────┼──────────────────┐        │                  │                  │   PUBLIC WEBSITE      MANAGEMENT          LEARNING        │                SYSTEM              SYSTEM        │                  │                  │   Home / About         Admin              Material   Courses              Teacher            Tests   Faculty              Student            Exams   Results              Admission          Results   Gallery              Attendance         Analytics   Contact              Fees   Notices              Payments                        Reports                           │                           ↓                       PostgreSQL                           │                           ↓                    Secure File Storage
+39. Project File Name
+Rajmudra-Academy-Project-Specification.docx
