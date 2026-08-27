@@ -117,7 +117,7 @@ export const HomePage: React.FC = () => {
                   {/* Central Logo */}
                   <div className="inline-block relative">
                     <img
-                      src={`${import.meta.env.BASE_URL}assets/rajmudra-logo.png`}
+                      src={`/rajmudra-academy-platform/assets/rajmudra-logo.png`}
                       alt="Rajmudra Academy"
                       className="w-32 h-32 sm:w-36 sm:h-36 rounded-full mx-auto border-4 border-rajmudra-orange shadow-glow-orange object-cover"
                     />
@@ -673,6 +673,7 @@ export const HomePage: React.FC = () => {
     </div>
   );
 };
+
 
 
 

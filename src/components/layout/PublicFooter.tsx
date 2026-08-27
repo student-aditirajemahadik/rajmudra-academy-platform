@@ -26,7 +26,7 @@ export const PublicFooter: React.FC = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
               <img
-                src={`${import.meta.env.BASE_URL}assets/rajmudra-logo.png`}
+                src={`/rajmudra-academy-platform/assets/rajmudra-logo.png`}
                 alt="Rajmudra Career Academy Logo"
                 className="w-14 h-14 rounded-full border-2 border-rajmudra-orange shadow-glow-orange object-cover"
               />
@@ -155,6 +155,7 @@ export const PublicFooter: React.FC = () => {
     </footer>
   );
 };
+
 
 
 
