@@ -70,7 +70,7 @@ export const StudentLayout: React.FC = () => {
         <div className="p-5 border-b border-rajmudra-charcoal-light flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
             <img
-              src="/rajmudra-academy-platform/assets/rajmudra-logo.png"
+              src={`${import.meta.env.BASE_URL}assets/rajmudra-logo.png`}
               alt="Rajmudra Academy"
               className="w-10 h-10 rounded-full border border-rajmudra-orange object-cover shadow-glow-orange"
             />
@@ -193,4 +193,6 @@ export const StudentLayout: React.FC = () => {
     </div>
   );
 };
+
+
 

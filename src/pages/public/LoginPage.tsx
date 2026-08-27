@@ -77,7 +77,7 @@ export const LoginPage: React.FC = () => {
         <div className="text-center space-y-2">
           <div className="inline-block relative p-1 bg-gradient-to-tr from-rajmudra-orange to-amber-400 rounded-full shadow-glow-orange mb-2">
             <img
-              src="/rajmudra-academy-platform/assets/rajmudra-logo.png"
+              src={`${import.meta.env.BASE_URL}assets/rajmudra-logo.png`}
               alt="Rajmudra Academy"
               className="w-16 h-16 rounded-full object-cover bg-black"
             />
@@ -225,4 +225,6 @@ export const LoginPage: React.FC = () => {
     </div>
   );
 };
+
+
 
