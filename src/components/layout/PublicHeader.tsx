@@ -85,7 +85,7 @@ export const PublicHeader: React.FC = () => {
           <Link to="/" className="flex items-center gap-3 group">
             <div className="relative overflow-hidden rounded-full p-0.5 bg-gradient-to-tr from-rajmudra-orange to-amber-400 group-hover:scale-105 transition-transform duration-300 shadow-glow-orange">
               <img
-                src="/assets/rajmudra-logo.png"
+                src="/rajmudra-academy-platform/assets/rajmudra-logo.png"
                 alt="Rajmudra Career Academy Logo"
                 className="w-11 h-11 sm:w-12 sm:h-12 rounded-full object-cover bg-black"
               />
