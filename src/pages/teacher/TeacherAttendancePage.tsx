@@ -247,3 +247,4 @@ export const TeacherAttendancePage: React.FC = () => {
     </div>
   );
 };
+

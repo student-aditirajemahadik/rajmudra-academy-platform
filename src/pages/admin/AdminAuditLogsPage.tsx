@@ -114,3 +114,4 @@ export const AdminAuditLogsPage: React.FC = () => {
     </div>
   );
 };
+

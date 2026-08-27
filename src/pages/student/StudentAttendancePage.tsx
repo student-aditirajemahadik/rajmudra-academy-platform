@@ -100,3 +100,4 @@ export const StudentAttendancePage: React.FC = () => {
     </div>
   );
 };
+

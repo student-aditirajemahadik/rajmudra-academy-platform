@@ -202,3 +202,4 @@ export const AdminFeesPage: React.FC = () => {
     </div>
   );
 };
+

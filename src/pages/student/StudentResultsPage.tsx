@@ -80,3 +80,4 @@ export const StudentResultsPage: React.FC = () => {
     </div>
   );
 };
+

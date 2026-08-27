@@ -73,3 +73,4 @@ export const StudentDocumentsPage: React.FC = () => {
     </div>
   );
 };
+

@@ -510,3 +510,4 @@ export const db = {
 
 // Self initialize on import
 db.initialize();
+

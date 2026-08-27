@@ -293,3 +293,4 @@ export const AdminBatchesPage: React.FC = () => {
     </div>
   );
 };
+

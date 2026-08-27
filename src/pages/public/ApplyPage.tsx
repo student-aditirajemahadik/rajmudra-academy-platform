@@ -858,3 +858,4 @@ export const ApplyPage: React.FC = () => {
     </div>
   );
 };
+

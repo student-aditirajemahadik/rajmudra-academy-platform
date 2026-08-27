@@ -77,3 +77,4 @@ export const FacultyPage: React.FC = () => {
     </div>
   );
 };
+

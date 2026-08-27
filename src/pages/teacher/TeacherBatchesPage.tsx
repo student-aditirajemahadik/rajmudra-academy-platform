@@ -74,3 +74,4 @@ export const TeacherBatchesPage: React.FC = () => {
     </div>
   );
 };
+

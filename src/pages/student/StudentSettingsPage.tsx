@@ -123,3 +123,4 @@ export const StudentSettingsPage: React.FC = () => {
     </div>
   );
 };
+

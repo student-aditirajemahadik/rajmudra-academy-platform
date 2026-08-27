@@ -69,3 +69,4 @@ export const TeacherMarksPage: React.FC = () => {
     </div>
   );
 };
+

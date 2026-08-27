@@ -240,7 +240,7 @@ export const StudentFeesPage: React.FC = () => {
             <div className="p-6 rounded-2xl border-2 border-dashed border-gray-300 space-y-4 bg-white text-xs sm:text-sm">
               <div className="flex items-center justify-between border-b pb-3">
                 <div className="flex items-center gap-2">
-                  <img src="/assets/rajmudra-logo.jpeg" alt="Logo" className="w-10 h-10 rounded-full" />
+                  <img src="/assets/rajmudra-logo.png" alt="Logo" className="w-10 h-10 rounded-full" />
                   <div>
                     <h4 className="font-bold font-devanagari text-sm">॥ राजमुद्रा करिअर अकॅडमी ॥</h4>
                     <p className="text-[10px] text-gray-500">Pune, Maharashtra</p>
@@ -294,3 +294,4 @@ export const StudentFeesPage: React.FC = () => {
     </div>
   );
 };
+

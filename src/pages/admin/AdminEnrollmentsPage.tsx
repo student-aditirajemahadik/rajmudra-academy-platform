@@ -89,3 +89,4 @@ export const AdminEnrollmentsPage: React.FC = () => {
     </div>
   );
 };
+

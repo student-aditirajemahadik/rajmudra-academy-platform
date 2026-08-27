@@ -71,3 +71,4 @@ export const AdminResultsPage: React.FC = () => {
     </div>
   );
 };
+

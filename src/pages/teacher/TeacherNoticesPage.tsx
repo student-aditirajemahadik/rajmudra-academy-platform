@@ -37,3 +37,4 @@ export const TeacherNoticesPage: React.FC = () => {
     </div>
   );
 };
+

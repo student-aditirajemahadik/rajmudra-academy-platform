@@ -65,3 +65,4 @@ export const StudentCoursePage: React.FC = () => {
     </div>
   );
 };
+

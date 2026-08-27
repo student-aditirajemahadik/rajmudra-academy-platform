@@ -108,3 +108,4 @@ export const AdminEnquiriesPage: React.FC = () => {
     </div>
   );
 };
+

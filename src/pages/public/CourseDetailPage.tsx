@@ -278,3 +278,4 @@ export const CourseDetailPage: React.FC = () => {
     </div>
   );
 };
+

@@ -2308,8 +2308,8 @@ export const INITIAL_SETTINGS: AcademySettings = {
   academyName: '॥ राजमुद्रा ॥ करिअर अकॅडमी',
   tagline: 'घडवा आपले भविष्य राजमुद्रेच्या साथीने | SINCE 2017',
   establishedYear: 2017,
-  logoUrl: '/assets/rajmudra-logo.jpeg',
-  faviconUrl: '/assets/rajmudra-logo.jpeg',
+  logoUrl: '/assets/rajmudra-logo.png',
+  faviconUrl: '/assets/rajmudra-logo.png',
   phone: '+91 98220 12345',
   alternatePhone: '+91 94220 54321',
   email: 'info@rajmudra.com',
@@ -2373,3 +2373,4 @@ export const INITIAL_AUDIT_LOGS: AuditLog[] = [
     ipAddress: '192.168.1.100',
   },
 ];
+

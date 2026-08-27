@@ -123,3 +123,4 @@ export const TeacherProfilePage: React.FC = () => {
     </div>
   );
 };
+

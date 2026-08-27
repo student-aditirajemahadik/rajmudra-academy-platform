@@ -138,3 +138,4 @@ export const AdminNotificationsPage: React.FC = () => {
     </div>
   );
 };
+

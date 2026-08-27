@@ -266,3 +266,4 @@ export const AdminApplicationsPage: React.FC = () => {
     </div>
   );
 };
+

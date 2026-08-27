@@ -144,3 +144,4 @@ export const NoticesPage: React.FC = () => {
     </div>
   );
 };
+

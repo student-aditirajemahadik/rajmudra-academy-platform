@@ -66,3 +66,4 @@ export const StudentBatchPage: React.FC = () => {
     </div>
   );
 };
+

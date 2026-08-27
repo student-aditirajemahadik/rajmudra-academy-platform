@@ -80,3 +80,4 @@ export const AdminMaterialPage: React.FC = () => {
     </div>
   );
 };
+

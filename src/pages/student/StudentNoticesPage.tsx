@@ -61,3 +61,4 @@ export const StudentNoticesPage: React.FC = () => {
     </div>
   );
 };
+
